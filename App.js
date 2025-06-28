@@ -33,12 +33,12 @@ export default function App() {
       <View >
         <Text style={{fontSize:20,fontWeight:'bold',marginTop:10}} >Brand</Text>
         <ScrollView horizontal={true} contentContainerStyle={styles.brand} >
-          <Image source={require("./assets/logo1.png")} style={styles.logo}/>
-          <Image source={require("./assets/logo2.png")} style={styles.logo}/>
-          <Image source={require("./assets/logo3.png")} style={styles.logo}/>
-          <Image source={require("./assets/logo1.png")} style={styles.logo}/>
-          <Image source={require("./assets/logoo.png")} style={styles.logo}/>
-          <Image source={require("./assets/logo2.png")} style={styles.logo}/>
+          <View style={styles.bg}><Image source={require("./assets/logo1.png")} style={styles.logo}/></View>
+          <View style={styles.bg} ><Image source={require("./assets/logo2.png")} style={styles.logo}/></View>
+          <View style={styles.bg} ><Image source={require("./assets/logo3.png")} style={styles.logo}/></View>
+          <View style={styles.bg} ><Image source={require("./assets/logo1.png")} style={styles.logo}/></View>
+
+          <View style={styles.bg} ><Image source={require("./assets/logo2.png")} style={styles.logo}/></View>
         </ScrollView>
       </View>
       <View >
@@ -72,15 +72,24 @@ const styles = StyleSheet.create({
    
   },
   brand:{
-    marginTop:10,
-    height:50,
-    alignItems:'center', 
-    marginBottom:30,
+    // margin:30,
+    // height:70,
+    // alignItems:'stretch', 
+    // marginBottom:30,
   },
   logo:{
-  
-    // width:80,
-    marginRight:15,
+    // height:100,
+    // width:250,
+    // marginRight:15,
+    // justifyContent:'center',
+    alignItems:'center',
+  },
+  bg:{
+    backgroundColor:'#fff',
+    borderRadius:20,
+    padding:20,
+   marginHorizontal:7,
+   marginVertical:15,
   },
   film:{
     backgroundColor:'#fff',
